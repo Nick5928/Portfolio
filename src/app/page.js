@@ -37,6 +37,14 @@ export default function Home() {
           image="/Project Images/hireready.png"
           />
           <ProjectCard
+            title="Skyway"
+            description="Developed a full-stack app enabling users to search hotels, view weather, and save trips with authentication. Integrated OpenWeather, Amadeus, and Google Places APIs to provide rich, location-based content. Implemented a responsive UI with React supporting real-time filtering, navigation, and CRUD trip management. Managed backend logic with Supabase/PostgreSQL for secure user-specific trip data."
+            technologies={["React", "Node.js", "Supabase", "OpenWeather API", "Amadeus API", "Google Places API", "Tailwind CSS"]}
+            liveLink=""
+            repoLink=""
+            image="/Project Images/coming_soon.png"
+          />
+          <ProjectCard
             title="Game500"
             description="A real-time multiplayer mobile app for playing the classic 500 trick-taking card game with friends."
             technologies={["React Native", "Expo", "Express", "Socket.IO", "Tailwind CSS", "Node.js"]}
