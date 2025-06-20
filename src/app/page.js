@@ -1,103 +1,101 @@
-import Image from "next/image";
-
+import Navbar from "@/components/Navbar";
+import ProjectCard  from "@/components/ProjectCard";
+import SkillCard from "@/components/SkillCard";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="grid">
+      <Navbar />
+      <div id="home" className="flex flex-col gap-2 min-h-[95vh] items-center justify-center">
+        <h1 className="text-7xl font-bold">Nicholas Jones</h1>
+        <p className="text-2xl text-center w-[40%]">I&apos;m Nicholas Jones, a passionate Computer Science student from Roanoke Rapids, NC, with a strong enthusiasm for software development and problem-solving.</p>
+      </div>
+      
+      <section id="projects">
+        <h1>Projects</h1>
+        <div className="flex flex-col gap-4 items-center justify-center">
+          <ProjectCard
+          title="HireReady"
+          description="This web app empowers users to enhance their resumes by providing personalized resume scoring based on the job description, helping optimize for Applicant Tracking Systems (ATS). Users can easily improve their chances of getting noticed by recruiters through actionable feedback. Additionally, the app generates a clean, copy-friendly profile summary that simplifies the application process — making it quick and convenient to tailor and submit resumes across multiple job platforms."
+          technologies={["Next.js", "React", "Node.js", "Supabase", "OpenAI API", "Tailwind CSS", "HTML/CSS"]}
+          liveLink="https://hire-ready-ten.vercel.app/"
+          repoLink="https://github.com/Nick5928/HireReady"
+          image="/Project Images/hireready.png"
+          />
+          <ProjectCard
+            title="Game500"
+            description="A real-time multiplayer mobile app for playing the classic 500 trick-taking card game with friends."
+            technologies={["React Native", "Expo", "Express", "Socket.IO", "Tailwind CSS", "Node.js"]}
+            liveLink=""
+            repoLink=""
+            image="/Project Images/coming_soon.png"
+          />
+          <ProjectCard
+            title="Ca$hKeeper"
+            description="A financial manager mobile app used to track users' finances, keep up with their expenses and income."
+            technologies={["React Native", "Expo", "Express", "Tailwind CSS", "Node.js"]}
+            liveLink=""
+            repoLink=""
+            image="/Project Images/coming_soon.png"
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </section>
+        <section id="experience">
+          <h1>Test</h1>
+          <p>Im a full-stack developer passionate about building modern web apps.</p>
+        </section>
+        <section id="skills">
+          <h1>Skills</h1>
+
+          
+          <div className="grid grid-cols-10 gap-2">
+            <p className="col-span-10">Languages</p>
+            <SkillCard skill="JavaScript" image="https://skillicons.dev/icons?i=js" />
+            <SkillCard skill="TypeScript" image="https://skillicons.dev/icons?i=ts" />
+            <SkillCard skill="Python" image="https://skillicons.dev/icons?i=py" />
+            <SkillCard skill="Java" image="https://skillicons.dev/icons?i=java" />
+            <SkillCard skill="C" image="https://skillicons.dev/icons?i=c" />
+            <SkillCard skill="C++" image="https://skillicons.dev/icons?i=cpp" />
+            <SkillCard skill="HTML" image="https://skillicons.dev/icons?i=html" />
+            <SkillCard skill="CSS" image="https://skillicons.dev/icons?i=css" />
+          </div>
+
+          <h1>Databases</h1>
+          <div className="grid grid-cols-10 gap-2">
+            <SkillCard skill="PostgreSQL" image="https://skillicons.dev/icons?i=postgres" />
+            <SkillCard skill="SQLite" image="https://skillicons.dev/icons?i=sqlite" />
+            <SkillCard skill="Firebase" image="https://skillicons.dev/icons?i=firebase" />
+            <SkillCard skill="Supabase" image="https://skillicons.dev/icons?i=supabase" />
+            <SkillCard skill="Prisma" image="https://skillicons.dev/icons?i=prisma" />
+          </div>
+
+          <h1>Frameworks</h1>
+          <div className="grid grid-cols-10 gap-2">
+            <SkillCard skill="React.js" image="https://skillicons.dev/icons?i=react" />
+            <SkillCard skill="Next.js" image="https://skillicons.dev/icons?i=nextjs" />
+            <SkillCard skill="Node.js" image="https://skillicons.dev/icons?i=nodejs" />
+            <SkillCard skill="Nest.js" image="https://skillicons.dev/icons?i=nestjs" />
+            <SkillCard skill="Flask" image="https://skillicons.dev/icons?i=flask" />
+            <SkillCard skill="Bootstrap" image="https://skillicons.dev/icons?i=bootstrap" />
+            <SkillCard skill="jQuery" image="https://skillicons.dev/icons?i=jquery" />
+          </div>  
+          <h1>Miscellaneous</h1>
+          <div className="grid grid-cols-10 gap-2">
+            <SkillCard skill="Bash" image="https://skillicons.dev/icons?i=bash" />
+            <SkillCard skill="Git" image="https://skillicons.dev/icons?i=git" />
+            <SkillCard skill="GitHub" image="https://skillicons.dev/icons?i=github" />
+            <SkillCard skill="GitLab" image="https://skillicons.dev/icons?i=gitlab" />
+            <SkillCard skill="Postman" image="https://skillicons.dev/icons?i=postman" />
+            <SkillCard skill="Azure" image="https://skillicons.dev/icons?i=azure" />
+            <SkillCard skill="Vercel" image="https://skillicons.dev/icons?i=vercel" />
+            <SkillCard skill="VS Code" image="https://skillicons.dev/icons?i=vscode" />
+            <SkillCard skill="Eclipse" image="https://skillicons.dev/icons?i=eclipse" />
+            <SkillCard skill="Android Studio" image="https://skillicons.dev/icons?i=androidstudio" />
+          </div>
+        </section>
+        <section id="contact">
+          <h1>Test</h1>
+          <p>Im a full-stack developer passionate about building modern web apps.</p>
+        </section>
     </div>
   );
 }
