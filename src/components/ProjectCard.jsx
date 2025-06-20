@@ -7,7 +7,7 @@ export default function ProjectCard({
   image,
 }) {
   return (
-    <div className="bg-[var(--color-primary)] text-[var(--color-text)] rounded-2xl shadow-md w-[40%] transition-all">
+    <div className="bg-[var(--color-primary)] text-[var(--color-text)] rounded-2xl shadow-md w-[40%] transform transition duration-300 hover:-translate-x-2 hover:shadow-lg">
     
       {image && (
         <div className="rounded-xl p-2 mb-6 flex items-center justify-center">

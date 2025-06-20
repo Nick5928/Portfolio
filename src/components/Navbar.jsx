@@ -9,8 +9,8 @@ export default function Navbar() {
 
       
         <div className="hidden md:flex space-x-6 text-lg font-medium">
+            <a href="#about" className="hover:text-[var(--color-accent)]">ABOUT</a>
             <a href="#projects" className="hover:text-[var(--color-accent)]">PROJECTS</a>
-            <a href="#experience" className="hover:text-[var(--color-accent)]">EXPERIENCE</a>
             <a href="#skills" className="hover:text-[var(--color-accent)]">SKILLS</a>
             <a href="#contact" className="hover:text-[var(--color-accent)]">CONTACT</a>
         </div>
