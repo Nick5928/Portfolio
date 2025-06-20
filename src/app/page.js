@@ -47,7 +47,7 @@ export default function Home() {
           <ProjectCard
             title="Ca$hKeeper"
             description="A financial manager mobile app used to track users' finances, keep up with their expenses and income."
-            technologies={["React Native", "Expo", "Express", "Tailwind CSS", "Node.js"]}
+            technologies={["React Native", "Expo", "Express", ,"Firebase", "Tailwind CSS", "Node.js"]}
             liveLink=""
             repoLink=""
             image="/Project Images/coming_soon.png"
